@@ -1,5 +1,6 @@
 **1. ĐỀ TÀI:** 
     **KIỂM THỬ CHỨC NĂNG CHO WEBSITE NEWSHOP BẰNG CÔNG CỤ SELENIUM WEBDRIVER**
+    
 **2. MÔ TẢ:**
     Với mong muốn áp dụng kiến thức lý thuyết vào thực tế, nhóm chúng tôi đã quyết định 
 nghiên cứu đề tài "Kiểm thử chức năng cho website NewShop bằng công cụ Selenium WebDriver". 
