@@ -15,8 +15,9 @@ thiện năng lực cạnh tranh và mang lại lợi ích kinh doanh đáng k�
 **3. HƯỚNG DẪN SỬ DỤNG**
 
 * Mở Terminal, cài đặt lần lượt các thư viện selenium và pytest:
-    `pip install selenium`
   
+    `pip install selenium`
+
     `pip install pytest`
 
 * Mở file NewShop\tests lên và chạy từng test một trong các file: 
