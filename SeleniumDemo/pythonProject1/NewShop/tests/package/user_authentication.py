@@ -127,50 +127,12 @@ def change_password(newpassword):
             "//input[@name='password_confirmation']")
     new_password_confirmation.send_keys(newpassword+'1')
     new_password_confirmation.send_keys(Keys.ENTER)
-
     if is_password_changed():
         print('Đổi mật khẩu thành công!')
     else:
         print('Mật khẩu/Mật khẩu xác nhận không hợp lệ!')
     # Không trùng, dưới 8 kí tự, bỏ trống
 
-
-#
-def is_checkout_login_successful():
-    try:
-        find_by_xpath("//div[contains(text(),'* Đăng nhập để thanh toán tiện lợi hơn')]")
-        return True
-    except NoSuchElementException:
-        return False
-
-
-#
-def proceed_to_checkout():
-    get_homepage()
-    cart_button_xpath = "//a[contains(@class,'get-cart-box')]"
-    wait_until_clickable_xpath(cart_button_xpath)
-    wait_until_clickable_xpath("//span[contains(text(),'Tiến hành thanh toán')]")
-
-    is_checkout_login_successful()
-    name = 'Nguyen Dat'
-    email = 'exampleee@gmail.com'
-    phone = '0123456789'
-    find_and_click_by_xpath("//button[@type='submit']")
-    find_by_xpath("//input[@placeholder='Họ và Tên']").send_keys(name)
-    find_by_xpath("//input[@placeholder='Email']").send_keys(email)
-    find_by_xpath("//input[@placeholder='Số điện thoại']").send_keys(phone)
-    find_by_xpath("//input[@placeholder='Nhập lại số điện thoại']").send_keys(phone)
-    find_by_xpath("//input[@placeholder='Nhập lại số điện thoại']").send_keys(phone)
-    # adress = "(//li[@class ='el-select-dropdown__item'])[24]"
-    # adress = "//li[@class='el-select-dropdown__item']/span[text()='Hà Nội']"
-    address = "//span[contains(text(),'Hà Nội')]"
-    address_2 = "//span[contains(text(),'Quận Bắc Từ Liêm')]"
-    address_3 = "//span[contains(text(),'Phường Minh Khai')]"
-    address_detail = "//input[@placeholder='Nhập số nhà, tên đường']"
-    find_and_click_by_xpath(address)
-    find_and_click_by_xpath(address_2)
-    find_and_click_by_xpath(address_3)
-    find_and_click_by_xpath(address_detail)
 
 def main():
     login('ntwolf23@gmail.com','dat12345')

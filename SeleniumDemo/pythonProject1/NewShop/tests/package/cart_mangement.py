@@ -26,6 +26,22 @@ wait = WebDriverWait(driver, 10)
 # For Hovering Function
 actions = ActionChains(driver)
 
+# Initiate Chrome Webdriver
+def get_homepage():
+    global driver
+    if driver is None or not driver.session_id:
+        driver = webdriver.Chrome(options=option)
+    homepage_url = "https://newshop.vn/"
+    driver.get(homepage_url)
+
+
+# Quit driver. Set driver to None after quitting to ensure reinitialization
+def quit_driver():
+    time.sleep(2)
+    global driver
+    if driver is not None:
+        driver.quit()
+        driver = None
 
 # Initialize WebDriver if needed, rediredt to homepage_url
 
@@ -195,25 +211,6 @@ def logout():
     if is_login_successful():
         driver.find_element(By.LINK_TEXT, "Đăng xuất").click()
     print("Đăng Xuất thành công!")
-
-
-def get_homepage():
-    global driver
-    if driver is None or not driver.session_id:
-        driver = webdriver.Chrome(options=option)
-    homepage_url = "https://newshop.vn/"
-    driver.get(homepage_url)
-
-
-# Quit driver. Set driver to None after quitting to ensure reinitialization
-def quit_driver():
-    time.sleep(2)
-    global driver
-    if driver is not None:
-        driver.quit()
-        driver = None
-
-
 
 
 def main():
