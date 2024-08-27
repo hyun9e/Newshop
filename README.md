@@ -20,7 +20,7 @@ thiện năng lực cạnh tranh và mang lại lợi ích kinh doanh đáng k�
 
     `pip install pytest`
 
-* Mở file NewShop\tests lên và chạy từng test một trong các file: 
+* Trong file SeleniumDemo/pythonProject1/NewShop/tests, mở các file sau và chạy từng test một trong các file: 
     `Cart_Management_Test.py`
    
     `Order_Test.py`
